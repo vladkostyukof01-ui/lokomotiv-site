@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Локомотив — спортивно-танцевальный клуб в Красноярске</title>
+<meta name="description" content="Локомотив — спортивно-танцевальный клуб бальных танцев в Красноярске с 1993 года. Занятия для детей и взрослых, опытные тренеры, турнир «Кубок Красноярья».">
+<link rel="canonical" href="https://lokomotiv-site.onrender.com/">
+<meta property="og:title" content="Локомотив — спортивно-танцевальный клуб в Красноярске">
+<meta property="og:description" content="Школа бальных танцев с 1993 года. Занятия для детей и взрослых любого уровня.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236B1420'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' fill='%23C79A44' font-family='serif'%3EЛ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="brand">Локомотив</a>
+    <nav class="main-nav">
+      <a href="#about">О клубе</a>
+      <a href="#groups">Группы</a>
+      <a href="#coaches">Тренеры</a>
+      <a href="#rules">Правила</a>
+      <a href="#nabor">Набор</a>
+      <a href="#contact">Записаться</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" id="heroEyebrow"></span>
+        <h1 id="heroTitle"></h1>
+        <p class="lede" id="heroLede"></p>
+        <a href="#contact" class="btn btn-primary">Записаться на пробное занятие</a>
+      </div>
+      <div class="hero-image">
+        <img src="/img/hero-competition.jpg" alt="Воспитанники клуба «Локомотив» на турнире по спортивным танцам «В ритмах мира»" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" style="background: var(--surface);">
+    <div class="wrap">
+      <h2 class="section-title">О клубе</h2>
+      <p class="section-text" id="aboutText"></p>
+      <p class="section-text" id="achievementsText" style="margin-top: 20px;"></p>
+    </div>
+  </section>
+
+  <section class="section" id="competition">
+    <div class="wrap">
+      <h2 class="section-title">Кубок Красноярья</h2>
+      <p class="section-text" id="competitionText"></p>
+    </div>
+  </section>
+
+  <section class="section" id="groups" style="background: var(--surface);">
+    <div class="wrap">
+      <h2 class="section-title">Группы обучения</h2>
+      <div class="groups-grid" id="groupsGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="coaches">
+    <div class="wrap">
+      <h2 class="section-title">Тренеры</h2>
+      <div class="coaches-grid" id="coachesGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="rules" style="background: var(--surface);">
+    <div class="wrap">
+      <h2 class="section-title">Правила клуба</h2>
+      <ul class="rules-list" id="rulesList"></ul>
+    </div>
+  </section>
+
+  <section class="section" id="partner">
+    <div class="wrap">
+      <h2 class="section-title">Наш партнёр</h2>
+      <div class="partner-box">
+        <p style="margin: 0;" id="partnerText"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="nabor" style="background: var(--surface);">
+    <div class="wrap">
+      <h2 class="section-title">Новый набор</h2>
+      <p class="section-text" id="naborText"></p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <h2 class="section-title">Контакты</h2>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-card">
+            <h4>Адрес</h4>
+            <p class="value" id="address"></p>
+          </div>
+          <div class="contact-card">
+            <h4 id="phoneMainNote"></h4>
+            <p class="value"><a id="phoneMainLink" href="#"></a></p>
+          </div>
+          <div class="contact-card">
+            <h4 id="phoneAdminNote"></h4>
+            <p class="value"><a id="phoneAdminLink" href="#"></a></p>
+          </div>
+          <div class="contact-card">
+            <h4>Email</h4>
+            <p class="value"><a id="emailMainLink" href="#" style="font-size: 1rem;"></a></p>
+          </div>
+        </div>
+        <div>
+          <div class="map-frame">
+            <iframe id="mapFrame" src="" loading="lazy" title="Карта — расположение клуба «Локомотив»"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top: 48px;">Записаться на пробное занятие</h2>
+      <form class="lead-form" id="leadForm">
+        <div class="field">
+          <label for="name">Ваше имя</label>
+          <input id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="phone">Телефон</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+7 900 000 00 00">
+        </div>
+        <div class="field">
+          <label for="childAge">Возраст занимающегося</label>
+          <input id="childAge" name="childAge" placeholder="например, ребёнку 7 лет">
+        </div>
+        <div class="field">
+          <label for="message">Комментарий (необязательно)</label>
+          <textarea id="message" name="message" rows="3"></textarea>
+        </div>
+        <label class="consent">
+          <input type="checkbox" id="consent" required>
+          <span>Даю согласие на обработку персональных данных в соответствии с <a href="/privacy.html" target="_blank">политикой конфиденциальности</a></span>
+        </label>
+        <button type="submit" class="btn btn-primary" style="margin-top: 16px; width: 100%;">Отправить заявку</button>
+        <div class="form-msg" id="formMsg" hidden></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong id="footerBrand"></strong> — спортивно-танцевальный клуб, Красноярск</p>
+    <p id="footerContacts"></p>
+  </div>
+</footer>
+
+<script src="/common.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>
