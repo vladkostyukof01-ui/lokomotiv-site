@@ -45,46 +45,64 @@
     </div>
   </section>
 
+  <div class="motion-divider-wrap" aria-hidden="true">
+    <svg class="motion-divider" viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,30 C150,70 250,-10 400,30 C550,70 650,-10 800,30 C950,70 1050,-10 1200,30" stroke-width="2.5" opacity="0.55"/>
+    </svg>
+  </div>
+
   <section class="section" id="about" style="background: var(--surface);">
+    <div class="motion-lines" aria-hidden="true">
+      <svg class="motion-lines--tl" viewBox="0 0 400 400" fill="none">
+        <path d="M20,320 C120,320 100,120 220,140 C320,156 300,40 380,40" stroke="var(--gold)" stroke-width="3" opacity="0.5"/>
+        <path d="M0,220 C90,260 140,80 260,120" stroke="var(--wine)" stroke-width="2.5" opacity="0.4"/>
+      </svg>
+    </div>
     <div class="wrap">
-      <h2 class="section-title">О клубе</h2>
-      <p class="section-text" id="aboutText"></p>
-      <p class="section-text" id="achievementsText" style="margin-top: 20px;"></p>
+      <h2 class="section-title reveal">О клубе</h2>
+      <p class="section-text reveal" id="aboutText"></p>
+      <p class="section-text reveal" id="achievementsText" style="margin-top: 20px;"></p>
     </div>
   </section>
 
   <section class="section" id="competition">
     <div class="wrap">
-      <h2 class="section-title">Кубок Красноярья</h2>
-      <p class="section-text" id="competitionText"></p>
+      <h2 class="section-title reveal">Кубок Красноярья</h2>
+      <p class="section-text reveal" id="competitionText"></p>
     </div>
   </section>
 
   <section class="section" id="groups" style="background: var(--surface);">
     <div class="wrap">
-      <h2 class="section-title">Группы обучения</h2>
+      <h2 class="section-title reveal">Группы обучения</h2>
       <div class="groups-grid" id="groupsGrid"></div>
     </div>
   </section>
 
   <section class="section" id="coaches">
+    <div class="motion-lines" aria-hidden="true">
+      <svg class="motion-lines--br" viewBox="0 0 400 400" fill="none">
+        <path d="M20,320 C120,320 100,120 220,140 C320,156 300,40 380,40" stroke="var(--wine)" stroke-width="3" opacity="0.5"/>
+        <path d="M0,220 C90,260 140,80 260,120" stroke="var(--gold)" stroke-width="2.5" opacity="0.4"/>
+      </svg>
+    </div>
     <div class="wrap">
-      <h2 class="section-title">Тренеры</h2>
+      <h2 class="section-title reveal">Тренеры</h2>
       <div class="coaches-grid" id="coachesGrid"></div>
     </div>
   </section>
 
   <section class="section" id="rules" style="background: var(--surface);">
     <div class="wrap">
-      <h2 class="section-title">Правила клуба</h2>
+      <h2 class="section-title reveal">Правила клуба</h2>
       <ul class="rules-list" id="rulesList"></ul>
     </div>
   </section>
 
   <section class="section" id="partner">
     <div class="wrap">
-      <h2 class="section-title">Наш партнёр</h2>
-      <div class="partner-box">
+      <h2 class="section-title reveal">Наш партнёр</h2>
+      <div class="partner-box reveal">
         <p style="margin: 0;" id="partnerText"></p>
       </div>
     </div>
@@ -92,42 +110,48 @@
 
   <section class="section" id="nabor" style="background: var(--surface);">
     <div class="wrap">
-      <h2 class="section-title">Новый набор</h2>
-      <p class="section-text" id="naborText"></p>
+      <h2 class="section-title reveal">Новый набор</h2>
+      <p class="section-text reveal" id="naborText"></p>
     </div>
   </section>
 
+  <div class="motion-divider-wrap" aria-hidden="true">
+    <svg class="motion-divider" viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,30 C150,-10 250,70 400,30 C550,-10 650,70 800,30 C950,-10 1050,70 1200,30" stroke-width="2.5" opacity="0.55"/>
+    </svg>
+  </div>
+
   <section class="section" id="contact">
     <div class="wrap">
-      <h2 class="section-title">Контакты</h2>
+      <h2 class="section-title reveal">Контакты</h2>
       <div class="contact-grid">
         <div>
-          <div class="contact-card">
+          <div class="contact-card reveal">
             <h4>Адрес</h4>
             <p class="value" id="address"></p>
           </div>
-          <div class="contact-card">
+          <div class="contact-card reveal">
             <h4 id="phoneMainNote"></h4>
             <p class="value"><a id="phoneMainLink" href="#"></a></p>
           </div>
-          <div class="contact-card">
+          <div class="contact-card reveal">
             <h4 id="phoneAdminNote"></h4>
             <p class="value"><a id="phoneAdminLink" href="#"></a></p>
           </div>
-          <div class="contact-card">
+          <div class="contact-card reveal">
             <h4>Email</h4>
             <p class="value"><a id="emailMainLink" href="#" style="font-size: 1rem;"></a></p>
           </div>
         </div>
         <div>
-          <div class="map-frame">
+          <div class="map-frame reveal">
             <iframe id="mapFrame" src="" loading="lazy" title="Карта — расположение клуба «Локомотив»"></iframe>
           </div>
         </div>
       </div>
 
-      <h2 class="section-title" style="margin-top: 48px;">Записаться на пробное занятие</h2>
-      <form class="lead-form" id="leadForm">
+      <h2 class="section-title reveal" style="margin-top: 48px;">Записаться на пробное занятие</h2>
+      <form class="lead-form reveal" id="leadForm">
         <div class="field">
           <label for="name">Ваше имя</label>
           <input id="name" name="name" required autocomplete="name">
@@ -164,5 +188,6 @@
 
 <script src="/common.js"></script>
 <script src="/main.js"></script>
+<script src="/reveal.js"></script>
 </body>
 </html>

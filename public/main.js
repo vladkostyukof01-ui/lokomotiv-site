@@ -42,14 +42,14 @@ async function loadPage() {
 
   const groupsRes = await fetch('/api/groups');
   const { groups } = await groupsRes.json();
-  document.getElementById('groupsGrid').innerHTML = groups.map((g) => `
-    <div class="group-card">${escapeHtml(g.title)}</div>
+  document.getElementById('groupsGrid').innerHTML = groups.map((g, i) => `
+    <div class="group-card reveal" style="--reveal-delay: ${Math.min(i * 0.06, 0.3)}s">${escapeHtml(g.title)}</div>
   `).join('');
 
   const coachesRes = await fetch('/api/coaches');
   const { coaches } = await coachesRes.json();
-  document.getElementById('coachesGrid').innerHTML = coaches.map((c) => `
-    <div class="coach-card">
+  document.getElementById('coachesGrid').innerHTML = coaches.map((c, i) => `
+    <div class="coach-card reveal" style="--reveal-delay: ${Math.min(i * 0.08, 0.3)}s">
       <h3>${escapeHtml(c.name)}</h3>
       <p>${escapeHtml(c.body)}</p>
     </div>
@@ -57,8 +57,8 @@ async function loadPage() {
 
   const rulesRes = await fetch('/api/rules');
   const { rules } = await rulesRes.json();
-  document.getElementById('rulesList').innerHTML = rules.map((r) => `
-    <li>${escapeHtml(r.body)}</li>
+  document.getElementById('rulesList').innerHTML = rules.map((r, i) => `
+    <li class="reveal" style="--reveal-delay: ${Math.min(i * 0.05, 0.25)}s">${escapeHtml(r.body)}</li>
   `).join('');
 }
 

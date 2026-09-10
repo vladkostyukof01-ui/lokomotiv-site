@@ -10,30 +10,6 @@
   --radius: 18px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1C1315;
-    --surface: #271A1D;
-    --ink: #F3E9E4;
-    --ink-faint: #B6A2A6;
-    --wine: #A63548;
-    --wine-dark: #8C2838;
-    --gold: #D9B366;
-    --border: #3A272B;
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #1C1315;
-  --surface: #271A1D;
-  --ink: #F3E9E4;
-  --ink-faint: #B6A2A6;
-  --wine: #A63548;
-  --wine-dark: #8C2838;
-  --gold: #D9B366;
-  --border: #3A272B;
-}
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -230,7 +206,58 @@ nav.main-nav a:hover { color: var(--wine-dark); }
 footer.site-footer { background: var(--ink); color: var(--bg); padding: 32px 0; text-align: center; font-size: 0.9rem; }
 footer.site-footer a { color: var(--gold); }
 
+/* ===== Scroll reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.97);
+  transition: opacity 0.65s cubic-bezier(0.22, 0.68, 0.32, 1), transform 0.65s cubic-bezier(0.22, 0.68, 0.32, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.reveal-stagger.is-visible { transition-delay: var(--reveal-delay, 0s); }
+
+/* ===== Decorative motion lines ("Линия движения") ===== */
+.section {
+  position: relative;
+}
+.motion-lines {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.motion-lines svg {
+  position: absolute;
+  width: 130%;
+  max-width: 900px;
+  height: auto;
+}
+.motion-lines .motion-lines--tl { top: -40px; left: -80px; }
+.motion-lines .motion-lines--br { bottom: -60px; right: -100px; transform: rotate(180deg); }
+.section > .wrap { position: relative; z-index: 1; }
+
+.motion-divider-wrap {
+  line-height: 0;
+  background: var(--bg);
+}
+.motion-divider {
+  display: block;
+  width: 100%;
+  height: 36px;
+  color: var(--gold);
+}
+.motion-divider path { fill: none; stroke: currentColor; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn:hover { transform: none; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
